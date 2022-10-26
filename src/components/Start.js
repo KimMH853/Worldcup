@@ -15,7 +15,8 @@ const Button = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 2rem;
+    text-decoration-line: none;
 
 `
 
@@ -24,7 +25,7 @@ const Start = () => {
         <div>
             <Title>당신의 신인을 선택하세요</Title>
             
-            <Button><Link to="/choice">시작</Link></Button>    
+            <Button><Link to="/choice" >시작</Link></Button>    
             
             
         </div>

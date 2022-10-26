@@ -13,24 +13,26 @@ const FlexBox = styled.div`
     transform: translateX(-50%);
     background-color: #fff;
     padding: 0px 30px;
-    text-transform: uppercase;
     padding-bottom: 10px;
   }
   .flex-1 {
     flex: 1;
     min-width: 500px;
     overflow: hidden;
-    background-color: black;
     position: relative;
   }
-  .middleAge-img {
-    width: 100%;
-    height: 100%;
+  .actor-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 70%;
     transition: 0.5s;
     cursor: pointer;
   }
-  .middleAge-img:hover {
-    transform: scale(1.1);
+  .actor-img:hover {
+    //transform: scale(1.1);
     opacity: 0.8;
   }
   .name {
@@ -81,29 +83,29 @@ const items = [
 ];
 
 const Choice = () => {
-  const [middleAges, setMiddleAges] = useState([]);
+  const [actors, setActors] = useState([]);
   const [displays, setDisplays] = useState([]);
   const [winners, setWinners] = useState([]);
   useEffect(() => {
     items.sort(() => Math.random() - 0.5);
-    setMiddleAges(items);
+    setActors(items);
     setDisplays([items[0], items[1]]);
   }, []);
 
-  const clickHandler = middleAge => () => {
-    if (middleAges.length <= 2) {
+  const clickHandler = actor => () => {
+    if (actors.length <= 2) {
       if (winners.length === 0) {
-        setDisplays([middleAge]);
+        setDisplays([actor]);
       } else {
-        let updatedMiddleAge = [...winners, middleAge];
-        setMiddleAges(updatedMiddleAge);
+        let updatedMiddleAge = [...winners, actor];
+        setActors(updatedMiddleAge);
         setDisplays([updatedMiddleAge[0], updatedMiddleAge[1]]);
         setWinners([]);
       }
-    } else if (middleAges.length > 2) {
-      setWinners([...winners, middleAge]);
-      setDisplays([middleAges[2], middleAges[3]]);
-      setMiddleAges(middleAges.slice(2));
+    } else if (actors.length > 2) {
+      setWinners([...winners, actor]);
+      setDisplays([actors[2], actors[3]]);
+      setActors(actors.slice(2));
     }
   };
   return (
@@ -112,7 +114,7 @@ const Choice = () => {
       {displays.map(d => {
         return (
           <div className="flex-1" key={d.name} onClick={clickHandler(d)}>
-            <img className="middleAge-img" src={d.src} alt={d.name} />
+            <img className="actor-img" src={d.src} alt={d.name} />
             <div className="name">{d.name}</div>
           </div>
         );
