@@ -15,14 +15,14 @@ const Button = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 10rem;
+    font-size: 30px;
 
 `
 
 const Start = () => {
     return (
         <div>
-            <Title>당신의 중년을 선택하세요</Title>
+            <Title>당신의 신인을 선택하세요</Title>
             
             <Button><Link to="/choice">시작</Link></Button>    
             

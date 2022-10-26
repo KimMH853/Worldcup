@@ -1,23 +1,83 @@
 import React, { useState, useEffect } from "react";
-import { FlexBox } from "./style";
+import styled from 'styled-components';
+
+const FlexBox = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  .title {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 0px 30px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  .flex-1 {
+    flex: 1;
+    min-width: 500px;
+    overflow: hidden;
+    background-color: black;
+    position: relative;
+  }
+  .middleAge-img {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .middleAge-img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  .name {
+    position: absolute;
+    z-index: 3;
+    color: #fff;
+    bottom: 10%;
+    font-size: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+`;
+
 
 const items = [
   {
-    name: "김무성",
-    src: require("../image/김무성.jpg")
+    name: "김윤태",
+    src: require("../image/김윤태.jpeg")
   },
   {
-    name: "나경원",
-    src: require("../image/나경원.jpg")
+    name: "김희진",
+    src: require("../image/김희진.jpg")
   },
   {
-    name: "박용진",
-    src: require("../image/박용진.jpg")
+    name: "서태웅",
+    src: require("../image/서태웅.jpeg")
   },
   {
-    name: "추미애",
-    src: require("../image/추미애.jpg")
-  }
+    name: "신윤제",
+    src: require("../image/신윤제.jpg")
+  },
+  {
+    name: "신희윤",
+    src: require("../image/신희윤.jpeg")
+  },
+  {
+    name: "안현희",
+    src: require("../image/안현희.jpeg")
+  },
+  {
+    name: "오욱환",
+    src: require("../image/오욱환.jpg")
+  },
+  {
+    name: "이소망",
+    src: require("../image/이소망.jpg")
+  },
 ];
 
 const Choice = () => {
@@ -48,7 +108,7 @@ const Choice = () => {
   };
   return (
     <FlexBox>
-      <h1 className="title">당신의 중년을 선택하세요</h1>
+      <h1 className="title">당신의 선택</h1>
       {displays.map(d => {
         return (
           <div className="flex-1" key={d.name} onClick={clickHandler(d)}>
