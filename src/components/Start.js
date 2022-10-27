@@ -15,9 +15,13 @@ const Button = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 2rem;
+    
     text-decoration-line: none;
-
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        color : black;
+    }
 `
 
 const Start = () => {

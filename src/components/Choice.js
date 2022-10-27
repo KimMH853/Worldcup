@@ -1,86 +1,73 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import items from "../lib/items";
 
 const FlexBox = styled.div`
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  .title {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    padding: 0px 30px;
-    padding-bottom: 10px;
-  }
-  .flex-1 {
-    flex: 1;
-    min-width: 500px;
-    overflow: hidden;
-    position: relative;
-  }
-  .actor-img {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 70%;
-    transition: 0.5s;
-    cursor: pointer;
-  }
-  .actor-img:hover {
+`;
+
+const Title = styled.h1`
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 0px 30px;
+  padding-bottom: 10px;
+`
+
+const ActorImg = styled.img`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 60%;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
     //transform: scale(1.1);
     opacity: 0.8;
   }
-  .name {
-    position: absolute;
-    z-index: 3;
-    color: #fff;
-    bottom: 10%;
-    font-size: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-`;
+`
 
+const ImgBox = styled.div`
+  flex: 1;
+  min-width: 500px;
+  overflow: hidden;
+  position: relative;
+`
 
-const items = [
-  {
-    name: "김윤태",
-    src: require("../image/김윤태.jpeg")
-  },
-  {
-    name: "김희진",
-    src: require("../image/김희진.jpg")
-  },
-  {
-    name: "서태웅",
-    src: require("../image/서태웅.jpeg")
-  },
-  {
-    name: "신윤제",
-    src: require("../image/신윤제.jpg")
-  },
-  {
-    name: "신희윤",
-    src: require("../image/신희윤.jpeg")
-  },
-  {
-    name: "안현희",
-    src: require("../image/안현희.jpeg")
-  },
-  {
-    name: "오욱환",
-    src: require("../image/오욱환.jpg")
-  },
-  {
-    name: "이소망",
-    src: require("../image/이소망.jpg")
-  },
-];
+const Name = styled.div`
+  position: absolute;
+  z-index: auto;
+  color: black;
+  bottom: 10%;
+  font-size: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+`
+const Information = styled.div`
+  flex: 2;
+  z-index: 3;
+  color: black;
+  bottom: 10%;
+  font-size: 2rem;
+  text-align:  right;
+  vertical-align: middle;
+  
+  a {
+        text-decoration: none;
+        font-size: 2rem;
+        color : black;
+        text-align:  right;
+        vertical-align: bottom; 
+    }
+`
 
 const Choice = () => {
   const [actors, setActors] = useState([]);
@@ -110,13 +97,14 @@ const Choice = () => {
   };
   return (
     <FlexBox>
-      <h1 className="title">당신의 선택</h1>
+      <Title>당신의 선택</Title>
       {displays.map(d => {
         return (
-          <div className="flex-1" key={d.name} onClick={clickHandler(d)}>
-            <img className="actor-img" src={d.src} alt={d.name} />
-            <div className="name">{d.name}</div>
-          </div>
+          <ImgBox  key={d.name} onClick={clickHandler(d)}>
+            <ActorImg src={d.src} alt={d.name} />
+            <Name>{d.name}</Name>
+            <Information >{displays.length === 1 ? <div><p>{d.birthday}</p><p>{d.career}</p> <Link to="/" >다시하기</Link></div> : null}</Information>
+          </ImgBox>
         );
       })}
     </FlexBox>
