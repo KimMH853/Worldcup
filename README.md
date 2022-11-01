@@ -1,6 +1,9 @@
 # 당신의 신인
 
 >이상형 월드컵으로 내 취향 신인 찾기
+<br />
+
+>사용 기술
 
 <div align="center">
 	<img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=React&logoColor=white" /> &nbsp
@@ -9,7 +12,7 @@
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" /> &nbsp
 </div>
 
-<hr />
+<br />
 
 >구현 화면
 
