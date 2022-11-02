@@ -3,6 +3,11 @@ import items from "../lib/items";
 
 const Choice = () => {
   const [actors, setActors] = useState([]);
+  const [winners, setWinners] = useState([]);
+
+  const clickHandler = (a) => {
+    console.log(a);
+  };
 
   useEffect(() => {
     items.sort(() => Math.random() - 0.5);
@@ -12,7 +17,16 @@ const Choice = () => {
     <div>
       <h1>골라요</h1>
       {actors.map((a) => {
-        return <img key={a.name} src={a.src} alt={a.name} />;
+        return (
+          <div
+            key={a.name}
+            onClick={() => {
+              clickHandler(a);
+            }}
+          >
+            <img src={a.src} alt={a.name} />;
+          </div>
+        );
       })}
     </div>
   );
