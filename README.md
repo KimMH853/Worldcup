@@ -1,6 +1,6 @@
 # 당신의 신인
 
->이상형 월드컵으로 내 취향 신인 찾기
+>이상형 월드컵
 <br />
 
 >사용 기술
@@ -12,13 +12,4 @@
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" /> &nbsp
 </div>
 
-<br />
-
->구현 화면
-
-## 시작
-<img src="https://user-images.githubusercontent.com/100124429/199179008-7f757764-a57f-48a4-8329-6faff71dbc6a.png" width="600" height="400"/>
-
-## 선택
-<img src="https://user-images.githubusercontent.com/100124429/199179290-273f53f2-18f7-4e6a-8931-9c2ccd9889bf.png" width="600" height="400"/>
 
