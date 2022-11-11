@@ -12,13 +12,14 @@
 	<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" /> &nbsp
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" /> &nbsp
 </div>
-
+<br />
 
 >구현 화면
 
 * 시작 페이지
 
 ![포폴3](https://user-images.githubusercontent.com/100124429/201275009-608d6103-9724-4c1a-9060-037b6411360c.PNG)
+<img src="https://user-images.githubusercontent.com/100124429/201275009-608d6103-9724-4c1a-9060-037b6411360c.PNG"  width="700" height="370">
 
 * 선택 페이지
 ![포폴2](https://user-images.githubusercontent.com/100124429/201275025-2fa55595-116e-455d-b2be-77b514768ec6.PNG)
