@@ -17,7 +17,11 @@
 >구현 화면
 
 * 시작 페이지
-<img src="https://user-images.githubusercontent.com/100124429/201275009-608d6103-9724-4c1a-9060-037b6411360c.PNG"  width="800" height="500">
+<img src="https://user-images.githubusercontent.com/100124429/201275009-608d6103-9724-4c1a-9060-037b6411360c.PNG"  width="900" height="500">
 
 * 선택 페이지
-<img src="https://user-images.githubusercontent.com/100124429/201275025-2fa55595-116e-455d-b2be-77b514768ec6.PNG"  width="800" height="500">
+<img src="https://user-images.githubusercontent.com/100124429/201275025-2fa55595-116e-455d-b2be-77b514768ec6.PNG"  width="900" height="500">
+
+* 결과 페이지
+<img src="https://user-images.githubusercontent.com/100124429/201275938-5bdd0eb9-cc6d-4e11-92a1-e9101c3f150e.PNG"  width="900" height="500">
+
